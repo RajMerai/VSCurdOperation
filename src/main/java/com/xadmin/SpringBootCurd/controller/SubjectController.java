@@ -1,8 +1,6 @@
 package com.xadmin.SpringBootCurd.controller;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.DeleteMapping;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,9 +32,9 @@ public class SubjectController {
     public void updateSubject(@PathVariable String id, @RequestBody Subject subject) {
         subjectService.updateSubject(id, subject);
     }
-    
+
     @RequestMapping(method = RequestMethod.DELETE, value = "/subjects/{id}")
-    //@DeleteMapping("/subjects/{id}")
+    // @DeleteMapping("/subjects/{id}")
     public void deleteSubject(@PathVariable String id) {
         subjectService.deleteSubject(id);
     }
